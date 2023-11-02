@@ -1,9 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+        <UserSecretsId>5079f7e9-70d7-499d-b675-3af9f0d96c60</UserSecretsId>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Jira.RestClient\Jira.RestClient.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0-rc.2.23479.6" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0-preview-23503-02" />
+      <PackageReference Include="xunit" Version="2.6.0" />
+      <PackageReference Include="Xunit.DependencyInjection" Version="8.9.0" />
+      <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
 
 </Project>
